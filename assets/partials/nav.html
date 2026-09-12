@@ -1,0 +1,43 @@
+<!-- Shared Navigation Bar - Sprinkle & Sparkle Boutique -->
+<nav class="fixed top-0 w-full z-50 bg-[#FFFDFE]/90 backdrop-blur-md" data-nav>
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto relative z-10">
+    <!-- Mobile Menu Icon -->
+    <button class="md:hidden text-on-surface-variant cursor-pointer active:scale-95 transition-transform hover:text-primary transition-colors duration-300" aria-label="Menu" data-mobile-menu-btn>
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <!-- Navigation Links (Desktop) -->
+    <div class="hidden md:flex items-center gap-8" data-nav-links>
+      <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md tracking-wide cursor-pointer active:scale-95 transition-transform" href="shop.html">Shop</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md tracking-wide cursor-pointer active:scale-95 transition-transform" href="about.html">About</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md tracking-wide cursor-pointer active:scale-95 transition-transform" href="contact.html">Contact</a>
+    </div>
+    <!-- Brand Logo (bubbly script-adjacent) -->
+    <a class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary text-center mx-auto md:mx-0 cursor-pointer active:scale-95 transition-transform" href="index.html" data-brand-link>
+      Sprinkle &amp; Sparkle
+    </a>
+    <!-- Trailing Icons -->
+    <div class="flex items-center gap-4">
+      <button class="nav-icon-btn hidden md:block" aria-label="Search">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+      <button class="nav-icon-btn" aria-label="Account" data-account-btn>
+        <span class="material-symbols-outlined">account_circle</span>
+      </button>
+      <button class="nav-icon-btn relative" aria-label="Shopping Bag" data-cart-btn>
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold hidden" data-cart-badge>0</span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu Panel (hidden by default) -->
+  <div class="md:hidden bg-[#FFFDFE]/95 backdrop-blur-md border-t border-outline-variant/30 hidden pb-10" data-mobile-menu>
+    <div class="px-margin-mobile py-4 space-y-4">
+      <a class="block text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md tracking-wide" href="shop.html">Shop</a>
+      <a class="block text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md tracking-wide" href="about.html">About</a>
+      <a class="block text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md tracking-wide" href="contact.html">Contact</a>
+      <a class="block text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md tracking-wide" href="account.html">My Account</a>
+    </div>
+  </div>
+  <!-- Scalloped bottom edge (in-flow, forms the nav's bottom boundary) -->
+  <div class="nav-scallop" data-nav-scallop></div>
+</nav>

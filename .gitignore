@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Dev / test artifacts
+screenshots/
+*.zip
+
+# Environment
+.env
+.env.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~

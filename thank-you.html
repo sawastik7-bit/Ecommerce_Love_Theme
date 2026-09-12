@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Confirmation - Sprinkle &amp; Sparkle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Caveat:wght@500..700&family=Quicksand:wght@400..700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Shared Navigation -->
+<div data-include="nav"></div>
+
+<main class="flex-grow flex items-center justify-center pb-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<!-- Decorative Background Elements -->
+<div class="heart-watermark absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.05] z-0"></div>
+<div class="max-w-xl w-full bg-surface-container-lowest rounded-xl shadow-soft-ambient p-8 md:p-12 relative z-10 text-center flex flex-col items-center">
+<!-- Heart Illustration -->
+<div class="w-24 h-24 rounded-full bg-primary-fixed flex items-center justify-center mb-8 shadow-polaroid animate-pulse" style="animation-duration: 3s;">
+<span class="material-symbols-outlined fill text-primary" style="font-size: 48px;">favorite</span>
+</div>
+<!-- Header -->
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2">Thank <span class="text-primary">You!</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Your order has been placed beautifully. So sparkly!</p>
+<!-- Order Details -->
+<div class="w-full text-center space-y-2 mb-10">
+<p class="font-body-md text-body-md text-on-surface">Order Number: <span class="font-semibold text-primary">#EB-84729A</span></p>
+<p class="font-body-md text-body-md text-on-surface-variant">Estimated Delivery: <span class="text-on-surface">Thursday, Oct 26</span></p>
+</div>
+<!-- Order Summary Card -->
+<div class="w-full bg-white rounded-xl p-6 mb-10 text-left border border-[#fbe0ec] shadow-polaroid">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6 border-b border-[#fbe0ec] pb-4"><span class="text-secondary">Order</span> Summary</h3>
+<div class="space-y-4 mb-6">
+<!-- Item 1 -->
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-primary-fixed flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A delicate, high-end bridal silk scrunchie in a soft blush color." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfQKFAThII-P4QJGupnC4b7Pd3Wb5qHeUiCRAmLYURGGcCLjwjjY637sLArpEe6NxtSfDuS0zBgkWHGOF15Bk1JlEDY73lQb3NEJyXW7qE5SIqYWyvErVEe2TVlFCU-_DKVbEa0RJ8rFz4qeLrM7OxWGDysKZCsn3uhEpKLZlnts_hEVq0VOu8q0xxXcCuBWiBXnJq6RnX9-drM7Rk928J6MB-SaxJr8zeKDvvTDxA9pRVw_XkNq0N"/>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Silk Peony Scrunchie</p>
+<p class="font-body-md text-body-md text-sm text-on-surface-variant">Blush • Qty 1</p>
+</div>
+</div>
+<p class="font-body-md text-body-md font-medium text-on-surface">$45.00</p>
+</div>
+<!-- Item 2 -->
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-secondary-fixed flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="An elegant gold-plated hair pin adorned with tiny, realistic ceramic pearls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7nuLtdFisnnjrlJ3I3v8GQIZ8iy2VDjiXfVvoy2ZzvJVt0G48V0Tk0ZvZwAswOO2s4iK7Wpws7B_lVDS2Wf8db-85-X7W-tuxfILv_424Xn33wh2vFJYb1kGf4tV-PSmqaKTvB1HBjTjLTXAB_yzrZtz38bdDho7YjqEn7zOQ5FVh9Ha8T5O-CAUKKfdsR6-jIVqyFdietz7Ax4XkF8ZVj4gLOFuCGcMNgrl6rT4l-hH5VAx1I76m"/>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Pearl Drop Hairpin</p>
+<p class="font-body-md text-body-md text-sm text-on-surface-variant">Gold • Qty 2</p>
+</div>
+</div>
+<p class="font-body-md text-body-md font-medium text-on-surface">$70.00</p>
+</div>
+</div>
+<div class="border-t border-outline-variant/50 pt-4 space-y-2">
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span>Subtotal</span>
+<span>$115.00</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span>Shipping</span>
+<span>$10.00</span>
+</div>
+<div class="flex justify-between font-headline-sm text-body-lg font-semibold text-primary mt-4">
+<span>Total</span>
+<span>$125.00</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+<a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-8 py-4 rounded-full shadow-soft-ambient hover:bg-primary/90 transition-colors duration-300 w-full sm:w-auto tracking-widest flex items-center justify-center gap-2" href="account.html">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+                    Track Order
+                </a>
+<a class="bg-secondary-fixed border border-secondary text-on-secondary font-label-caps text-label-caps uppercase px-8 py-4 rounded-full hover:bg-secondary transition-colors duration-300 w-full sm:w-auto tracking-widest" href="shop.html">
+                    Continue Shopping
+                </a>
+</div>
+</div>
+</main>
+
+<!-- Shared Footer -->
+<div data-include="footer"></div>
+</body>
+</html>

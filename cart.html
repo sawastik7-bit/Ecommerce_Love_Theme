@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping Cart - Sprinkle &amp; Sparkle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Caveat:wght@500..700&family=Quicksand:wght@400..700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col overflow-x-hidden relative floral-watermark">
+<!-- Shared Navigation -->
+<div data-include="nav"></div>
+
+<!-- Main Content Canvas -->
+<main class="flex-grow pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Page Header -->
+<header class="mb-12">
+<h1 class="font-headline-md text-headline-md text-on-surface mb-2">Your <span class="text-secondary">Sparkly</span> Shopping Bag</h1>
+<p class="font-body-md text-body-md text-on-surface-variant" data-cart-count>0 items securely reserved for you.</p>
+</header>
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Cart Items Column -->
+<div class="flex-grow space-y-6" data-cart-items>
+<!-- Items rendered via JS -->
+</div>
+<!-- Order Summary Sidebar -->
+<aside class="w-full lg:w-96 flex-shrink-0">
+<div class="sticky top-32 bg-white rounded-DEFAULT p-5 sm:p-7 soft-shadow flex flex-col gap-5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface border-b border-[#fbe0ec] pb-4">
+<span class="text-secondary">Order</span> Summary</h2>
+<div class="space-y-4 font-body-md text-body-md">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal</span>
+<span data-summary-subtotal>$0.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Estimated Shipping</span>
+<span>Calculated at checkout</span>
+</div>
+<!-- Promo Code -->
+<div class="pt-4 pb-2">
+<label class="sr-only" for="promo">Gift card or discount code</label>
+<div class="flex gap-2">
+<input class="flex-grow bg-[#fff1f7] rounded-full border border-[#eccee1] focus:border-primary focus:ring-1 focus:ring-primary px-4 py-2 font-body-md text-sm text-on-surface placeholder-outline transition-colors" id="promo" placeholder="Gift card or discount code" type="text"/>
+<button class="bg-secondary-fixed hover:bg-secondary text-on-secondary font-label-caps text-label-caps rounded-full px-6 py-2 transition-colors shadow-polaroid">Apply</button>
+</div>
+</div>
+</div>
+<div class="border-t border-[#fbe0ec] pt-4 flex justify-between items-center font-headline-sm text-headline-sm text-on-surface">
+<span>Total</span>
+<span data-summary-total>$0.00</span>
+</div>
+<p class="font-body-md text-xs text-on-surface-variant text-center">Taxes and shipping calculated at checkout</p>
+<a class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-caps text-body-md py-4 rounded-full transition-colors shadow-polaroid flex justify-center items-center gap-2" href="checkout.html">
+                        Proceed to Checkout
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</aside>
+</div>
+<!-- Empty State (shown when cart is empty) -->
+<div class="hidden flex flex-col items-center justify-center py-section-gap text-center max-w-md mx-auto" data-cart-empty>
+<span class="material-symbols-outlined text-[120px] text-primary-fixed-dim mb-6" style="font-variation-settings: 'wght' 100;">favorite</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Your bag is empty</h2>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-8">but your heart doesn't have to be! Discover our latest sparkly, adorable additions.</p>
+<a class="inline-flex bg-primary hover:bg-primary-container text-on-primary font-label-caps text-body-md px-8 py-4 rounded-full transition-colors justify-center items-center shadow-polaroid" href="shop.html">
+                Continue Shopping
+            </a>
+</div>
+</main>
+
+<!-- Shared Footer -->
+<div data-include="footer"></div>
+</body>
+</html>

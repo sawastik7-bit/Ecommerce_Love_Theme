@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sprinkle &amp; Sparkle - Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Caveat:wght@500..700&family=Quicksand:wght@400..700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col overflow-x-hidden">
+<!-- Shared Navigation -->
+<div data-include="nav"></div>
+
+<!-- Main Content -->
+<main class="pb-section-gap min-h-screen bg-[#fff1f7]">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Breadcrumb & Header -->
+<div class="mb-12 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<nav class="flex text-sm text-on-surface-variant mb-4 font-body-md text-body-md">
+<a class="hover:text-primary transition-colors" href="index.html">Home</a>
+<span class="mx-2">/</span>
+<span class="text-primary">Shop</span>
+</nav>
+<h1 class="font-headline-md text-headline-md text-on-surface">All <span class="text-secondary">Cute Things</span></h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Sparkly little accessories for every mood.</p>
+</div>
+<!-- Sort Dropdown -->
+<div class="flex items-center gap-3">
+<span class="text-on-surface-variant text-sm">Sort by:</span>
+<div class="relative">
+<select class="appearance-none bg-transparent border border-outline-variant rounded-full py-2 pl-4 pr-10 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary cursor-pointer transition-colors font-body-md text-body-md">
+<option>Newest</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Popularity</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Shop Layout: Sidebar + Grid -->
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Left Sidebar Filters -->
+<aside class="w-full lg:w-[280px] flex-shrink-0">
+<div class="sticky top-28 space-y-10">
+<!-- Category Filter -->
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface mb-4 uppercase tracking-widest">Category</h3>
+<ul class="space-y-3 text-on-surface-variant">
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="filter-checkbox rounded-[4px] border-outline-variant text-primary focus:ring-primary h-4 w-4 transition-colors" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Dresses</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="filter-checkbox rounded-[4px] border-outline-variant text-primary focus:ring-primary h-4 w-4 transition-colors" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Jewelry</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="filter-checkbox rounded-[4px] border-outline-variant text-primary focus:ring-primary h-4 w-4 transition-colors" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Accessories</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="filter-checkbox rounded-[4px] border-outline-variant text-primary focus:ring-primary h-4 w-4 transition-colors" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Bags</span>
+</label>
+</li>
+</ul>
+</div>
+<!-- Price Range Filter -->
+<div class="pt-6 border-t border-outline-variant/30">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-6 uppercase tracking-widest">Price Range</h3>
+<div class="px-2">
+<input class="w-full appearance-none bg-transparent focus:outline-none" max="1000" min="0" type="range" value="400"/>
+</div>
+<div class="flex justify-between mt-4 text-on-surface-variant font-body-md text-sm">
+<span>$0</span>
+<span>$1,000+</span>
+</div>
+</div>
+<!-- Size Filter (Soft Rounded Chips) -->
+<div class="pt-6 border-t border-outline-variant/30">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-4 uppercase tracking-widest">Size</h3>
+<div class="flex flex-wrap gap-2">
+<button class="h-10 w-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary hover:bg-primary-fixed/20 transition-all font-label-caps text-label-caps">XS</button>
+<button class="h-10 w-10 rounded-full border border-primary bg-primary text-on-primary flex items-center justify-center transition-all font-label-caps text-label-caps shadow-diffused">S</button>
+<button class="h-10 w-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary hover:bg-primary-fixed/20 transition-all font-label-caps text-label-caps">M</button>
+<button class="h-10 w-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary hover:bg-primary-fixed/20 transition-all font-label-caps text-label-caps">L</button>
+<button class="h-10 w-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary hover:bg-primary-fixed/20 transition-all font-label-caps text-label-caps">XL</button>
+</div>
+</div>
+<!-- Color Filter (Soft Tone Swatches) -->
+<div class="pt-6 border-t border-outline-variant/30">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-4 uppercase tracking-widest">Color</h3>
+<div class="flex flex-wrap gap-3">
+<!-- Blush Pink -->
+<button aria-label="Blush Pink" class="h-8 w-8 rounded-full bg-primary-fixed border border-outline-variant/50 ring-2 ring-transparent focus:ring-primary hover:scale-110 transition-transform"></button>
+<!-- Lavender -->
+<button aria-label="Lavender" class="h-8 w-8 rounded-full bg-tertiary-fixed border border-outline-variant/50 ring-2 ring-transparent focus:ring-primary hover:scale-110 transition-transform"></button>
+<!-- Cream/Surface -->
+<button aria-label="Cream" class="h-8 w-8 rounded-full bg-surface-container-low border border-outline-variant/50 ring-2 ring-transparent focus:ring-primary hover:scale-110 transition-transform relative">
+<span class="absolute inset-0 rounded-full border border-outline-variant/20"></span>
+</button>
+<!-- Dark/On-Surface -->
+<button aria-label="Charcoal" class="h-8 w-8 rounded-full bg-on-tertiary-fixed-variant border border-outline-variant/50 ring-2 ring-transparent focus:ring-primary hover:scale-110 transition-transform"></button>
+<!-- Gold/Secondary -->
+<button aria-label="Gold" class="h-8 w-8 rounded-full bg-secondary-fixed-dim border border-outline-variant/50 ring-2 ring-transparent focus:ring-primary hover:scale-110 transition-transform"></button>
+</div>
+</div>
+<!-- Availability Filter -->
+<div class="pt-6 border-t border-outline-variant/30">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-4 uppercase tracking-widest">Availability</h3>
+<ul class="space-y-3 text-on-surface-variant">
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="filter-checkbox rounded-[4px] border-outline-variant text-primary focus:ring-primary h-4 w-4 transition-colors" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">In Stock</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="filter-checkbox rounded-[4px] border-outline-variant text-primary focus:ring-primary h-4 w-4 transition-colors" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Pre-order</span>
+</label>
+</li>
+</ul>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area (Right Side) -->
+<div class="flex-1">
+<!-- 4 Column Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12" data-shop-grid>
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col">
+<a class="block" href="product.html">
+<!-- Image Container with soft mat background -->
+<div class="aspect-[3/4] bg-primary-fixed rounded-DEFAULT overflow-hidden relative mb-1 isolate">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out z-0" data-alt="A sophisticated editorial fashion shot of a flowing silk slip dress in a soft blush pink hue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWIF8uifTU-cNClzPLwPrUnpHA1KQHMNcwjSICY1qC-Z7G4uR3Dih_uM3H6ljm1ZW_PB3wRSDA78iahkitF958C3TFs-ZeXsQfEvuFokRzPDjIPpetJb6JPAy6pjt3iDZf9HJGcP5goFTCanesdXAvGamehJgrZgjQmMbPIf_Qh-gOTveCOezfds421K6K1zCIpsRzfuHwTFjauFSiRE7O9GhSV4PanwTj59o1Hl8EDp5XjGT059uS"/>
+</a>
+<!-- Wishlist Heart -->
+<button class="absolute top-4 right-4 z-20 h-10 w-10 flex items-center justify-center rounded-full bg-surface/50 backdrop-blur-sm text-on-surface-variant hover:text-primary hover:bg-surface transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<!-- Quick Add Hover Button -->
+<div class="absolute bottom-6 left-0 right-0 flex justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+<button data-add-to-cart="aura-silk-slip-dress" class="bg-primary text-on-primary rounded-full px-8 py-3 font-label-caps text-label-caps whitespace-nowrap shadow-diffused hover:bg-primary-container transition-colors">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<!-- Details -->
+<div class="flex flex-col items-center text-center">
+<h2 class="font-headline-sm text-body-lg text-on-surface mb-1"><a href="product.html">Aura Silk Slip Dress</a></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">$245.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col">
+<a class="block" href="product.html">
+<div class="aspect-[3/4] bg-secondary-fixed rounded-DEFAULT overflow-hidden relative mb-1 isolate">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out z-0" data-alt="A close-up macro shot of delicate, minimalist gold layered necklaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBW049nbkFibwUdwUjgYRm0x_v63YWM29AoX0T6oaW-AZd0IU0L4noPzMxgxD97y_Xn0H2FL7FDEmgBZCZzrGOpjk6sQ0bCywYyQP9HQGtxgUWEYz5VWH9P7Xz7o-PDlnh4Im7zLXr7S4rtiOLImkMVzyrKqsNCAwvYfk-_zmQ63UAibjMaIrEJXha6Gyb8dgdrl7exlIUx8nFvehfi3oS3-fQeAHnoq6saHFcOOajB3mUc-JCVQlT"/>
+</a>
+<!-- New Badge (Chip) -->
+<div class="absolute top-4 left-4 z-20 flex items-center gap-1 bg-accent text-on-accent px-3 py-1 rounded-full font-label-caps text-[10px] tracking-widest uppercase shadow-polaroid">
+                                <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                New
+                            </div>
+<a class="absolute top-4 right-4 z-20 h-10 w-10 flex items-center justify-center rounded-full bg-surface/50 backdrop-blur-sm text-primary transition-all duration-300" href="product.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</a>
+<div class="absolute bottom-6 left-0 right-0 flex justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+<button data-add-to-cart="lumina-layered-chain" class="bg-primary text-on-primary rounded-full px-8 py-3 font-label-caps text-label-caps whitespace-nowrap shadow-diffused hover:bg-primary-container transition-colors">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h2 class="font-headline-sm text-body-lg text-on-surface mb-1"><a href="product.html">Lumina Layered Chain</a></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">$110.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col">
+<a class="block" href="product.html">
+<div class="aspect-[3/4] bg-secondary-fixed rounded-DEFAULT overflow-hidden relative mb-1 isolate">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out z-0" data-alt="An elegant, soft-focus editorial image of a structural mini handbag in a creamy ivory leather." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Z82hmwyQNCjftcgzrZChTrpBfeb1QD4N4ebUVJZVX5l_5dgZ1jCYCHNvqW7z4bZP_rTimvqp_cjPBz3n92e8DnHY09tQJ8peK3eBrAeaIgmvTAsVaEKDMugIuFQFSmPirKa-2EgWFdq9FQXujTsdvq-Ca3az_SBO0fRn_pZs6rtM6lG6hy3rQ7qy448FwY5r-DmJiXBP2RpRTBuVfBXNc2HE_VjBh-_bbqnFA_OEnl4Nvswbwj-y"/>
+</a>
+<a class="absolute top-4 right-4 z-20 h-10 w-10 flex items-center justify-center rounded-full bg-surface/50 backdrop-blur-sm text-on-surface-variant hover:text-primary hover:bg-surface transition-all duration-300" href="product.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</a>
+<div class="absolute bottom-6 left-0 right-0 flex justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+<button data-add-to-cart="celeste-mini-satchel" class="bg-primary text-on-primary rounded-full px-8 py-3 font-label-caps text-label-caps whitespace-nowrap shadow-diffused hover:bg-primary-container transition-colors">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h2 class="font-headline-sm text-body-lg text-on-surface mb-1"><a href="product.html">Celeste Mini Satchel</a></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">$380.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative flex flex-col">
+<a class="block" href="product.html">
+<div class="aspect-[3/4] bg-secondary-fixed rounded-DEFAULT overflow-hidden relative mb-1 isolate">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out z-0" data-alt="A refined product photograph of delicate drop earrings featuring irregular freshwater pearls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG1DnZHq8tVxHKVj2AuD1y0hAiz88iH-7cseg_Xkl7qKmq5ToiGahYx62w2u7b6GB9tI-HnXhv4Rc7nRegqul153KazYgcZZlHbiRFBpyk8zqVqWiMosdprHd7J2_XIj67jZo-MifsMySPdBAGqlgmuIj9tJWBuhVGbzjXT1Urkx_dSvM-ZpVi-rfoW_IoIXmP4_hvIb3-i3PsTbQp9UNow3LS7kaSj_H8z4GymM8oBFdnJxdvcdbP"/>
+</a>
+<a class="absolute top-4 right-4 z-20 h-10 w-10 flex items-center justify-center rounded-full bg-surface/50 backdrop-blur-sm text-on-surface-variant hover:text-primary hover:bg-surface transition-all duration-300" href="product.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</a>
+<div class="absolute bottom-6 left-0 right-0 flex justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+<button data-add-to-cart="eos-pearl-drops" class="bg-primary text-on-primary rounded-full px-8 py-3 font-label-caps text-label-caps whitespace-nowrap shadow-diffused hover:bg-primary-container transition-colors">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h2 class="font-headline-sm text-body-lg text-on-surface mb-1"><a href="product.html">Eos Pearl Drops</a></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">$85.00</p>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative flex flex-col">
+<a class="block" href="product.html">
+<div class="aspect-[3/4] bg-primary-fixed rounded-DEFAULT overflow-hidden relative mb-1 isolate">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out z-0" data-alt="A fashion editorial shot featuring a romantic, sheer tulle blouse with delicate floral embroidery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzz7YqGECF6b0WUuuYACzKY-WGBH2DAJJvNHCxaFhmcfDTi9dWXCZrECsL1KJJ8qZytj5hOuCVuYYoC_dNYgm9UwPCkZVOewzeNG6HLrISx3JWAWRynqvtG0ZL0jkygXvs4F0f-wem5gNkqpTowxgsIa7fW_4pEA-_v9pPd38gaABU1UcuntLa2WjyaQbUnCsILpRhVosRI2xOI49hqiVjEjhjxJ0DdTCzkiT5Fv51Pj_f5TFcU8TL"/>
+</a>
+<a class="absolute top-4 right-4 z-20 h-10 w-10 flex items-center justify-center rounded-full bg-surface/50 backdrop-blur-sm text-on-surface-variant hover:text-primary hover:bg-surface transition-all duration-300" href="product.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</a>
+<div class="absolute bottom-6 left-0 right-0 flex justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+<button data-add-to-cart="reverie-tulle-blouse" class="bg-primary text-on-primary rounded-full px-8 py-3 font-label-caps text-label-caps whitespace-nowrap shadow-diffused hover:bg-primary-container transition-colors">
+                                    Add to Cart
+                                </button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h2 class="font-headline-sm text-body-lg text-on-surface mb-1"><a href="product.html">Reverie Tulle Blouse</a></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">$195.00</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative flex flex-col">
+<a class="block" href="product.html">
+<div class="aspect-[3/4] bg-secondary-fixed rounded-DEFAULT overflow-hidden relative mb-1 isolate">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out z-0" data-alt="A minimal still-life photo of a chic, wide-brimmed straw hat resting gracefully on a white sculptural plinth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAppem7ihH-TRWNpk7vRQij_T49XoFZxIkwOZEShuxnDyuOTh5n7aDERkL6F0eHNdBrZa2ljM82TvqO5cQCWUwbOw4XPjoK_cGtwrXrqoEOOGjx_M0JbNzyPS1tVykXhFWOUB7bhq870N4okigfB7RQTbDGLetQdf7N4X8j--zUS0pUnkUsdAnAkRwFQzML5gRRFtjotvbwZ6zw7y8OD_7qcGtkH6-NQ23aCJxfenm9Rmviz5RaRSWi"/>
+</a>
+<!-- Sold Out Badge -->
+<div class="absolute top-4 left-4 z-20 flex items-center gap-1 bg-white text-primary px-3 py-1 rounded-full font-label-caps text-[10px] tracking-widest uppercase shadow-polaroid">
+                                <span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                                Sold Out
+                            </div>
+<a class="absolute top-4 right-4 z-20 h-10 w-10 flex items-center justify-center rounded-full bg-surface/50 backdrop-blur-sm text-on-surface-variant hover:text-primary hover:bg-surface transition-all duration-300" href="product.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</a>
+<div class="absolute bottom-6 left-0 right-0 flex justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+<!-- Secondary button style for sold out -->
+<button class="bg-surface-container-highest text-on-surface-variant rounded-full px-8 py-3 font-label-caps text-label-caps whitespace-nowrap cursor-not-allowed">
+                                    Out of Stock
+                                </button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h2 class="font-headline-sm text-body-lg text-on-surface-variant mb-1"><a href="product.html">Solstice Sun Hat</a></h2>
+<p class="font-body-md text-body-md text-on-surface-variant/70 line-through">$120.00</p>
+</div>
+</div>
+</div>
+<!-- Load More Button -->
+<div class="mt-20 flex justify-center">
+<button class="rounded-full px-10 py-4 font-label-caps text-label-caps tracking-widest bg-secondary-fixed text-on-secondary hover:bg-secondary transition-all duration-300 shadow-polaroid">
+                            Load More
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Shared Footer -->
+<div data-include="footer"></div>
+</body>
+</html>

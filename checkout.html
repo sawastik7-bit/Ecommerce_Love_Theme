@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout | Sprinkle &amp; Sparkle</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Caveat:wght@500..700&family=Quicksand:wght@400..700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col overflow-x-hidden">
+<!-- Shared Navigation -->
+<div data-include="nav"></div>
+
+<!-- Main Content Area -->
+<main class="checkout-form pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen">
+<div class="mb-12">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2">Checkout <span class="text-primary">&#9829;</span></h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Please review your order and complete your payment. Almost there!</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-gutter relative">
+<!-- Left Column: Forms -->
+<div class="lg:col-span-7 flex flex-col gap-12">
+<!-- Shipping Address Section -->
+<section>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+                        Shipping Address
+                    </h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 ml-4" for="fullName">FULL NAME</label>
+<input class="w-full rounded-full border border-tertiary-fixed bg-surface px-6 py-4 font-body-md text-body-md text-on-surface transition-colors duration-300" id="fullName" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 ml-4" for="address">STREET ADDRESS</label>
+<input class="w-full rounded-full border border-tertiary-fixed bg-surface px-6 py-4 font-body-md text-body-md text-on-surface transition-colors duration-300" id="address" placeholder="123 Rosebud Lane, Apt 4B" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 ml-4" for="city">CITY</label>
+<input class="w-full rounded-full border border-tertiary-fixed bg-surface px-6 py-4 font-body-md text-body-md text-on-surface transition-colors duration-300" id="city" placeholder="New York" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 ml-4" for="pincode">ZIP / PINCODE</label>
+<input class="w-full rounded-full border border-tertiary-fixed bg-surface px-6 py-4 font-body-md text-body-md text-on-surface transition-colors duration-300" id="pincode" placeholder="10001" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 ml-4" for="phone">PHONE NUMBER</label>
+<input class="w-full rounded-full border border-tertiary-fixed bg-surface px-6 py-4 font-body-md text-body-md text-on-surface transition-colors duration-300" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</form>
+</section>
+<hr class="border-t border-outline-variant/30"/>
+<!-- Payment Method Section -->
+<section>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+                        Payment Method
+                    </h2>
+<div class="flex flex-col gap-4">
+<!-- Credit Card Option (Selected State Simulation) -->
+<label class="relative flex items-center gap-4 p-5 rounded-DEFAULT border border-primary bg-surface-container-low cursor-pointer transition-all duration-300 custom-shadow">
+<input checked="" class="sr-only" name="payment_method" type="radio" value="credit_card"/>
+<div class="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+</div>
+<div class="flex-1">
+<span class="font-body-lg text-body-lg text-on-surface block">Credit Card</span>
+</div>
+<div class="flex gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">credit_score</span>
+</div>
+<!-- Expandable Form (Visually expanded for design) -->
+<div class="absolute top-full left-0 w-full mt-2 p-6 rounded-DEFAULT border border-outline-variant bg-surface grid gap-4 custom-shadow z-10" style="display: grid;">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="md:col-span-2">
+<input class="w-full rounded-full border border-tertiary-fixed bg-surface px-6 py-4 font-body-md text-body-md text-on-surface transition-colors duration-300" placeholder="Card Number" type="text"/>
+</div>
+<div>
+<input class="w-full rounded-full border border-tertiary-fixed bg-surface px-6 py-4 font-body-md text-body-md text-on-surface transition-colors duration-300" placeholder="MM/YY" type="text"/>
+</div>
+<div>
+<input class="w-full rounded-full border border-tertiary-fixed bg-surface px-6 py-4 font-body-md text-body-md text-on-surface transition-colors duration-300" placeholder="CVC" type="text"/>
+</div>
+</div>
+</div>
+</label>
+<!-- Spacing to accommodate the absolute positioned form above in a real flow -->
+<div class="h-48 hidden md:block"></div>
+<div class="h-64 block md:hidden"></div>
+<!-- UPI Option -->
+<label class="flex items-center gap-4 p-5 rounded-DEFAULT border border-tertiary-fixed bg-surface hover:bg-surface-container-low cursor-pointer transition-all duration-300">
+<input class="sr-only" name="payment_method" type="radio" value="upi"/>
+<div class="w-6 h-6 rounded-full border-2 border-tertiary-fixed flex items-center justify-center"></div>
+<div class="flex-1">
+<span class="font-body-lg text-body-lg text-on-surface block">UPI (Google Pay, PhonePe)</span>
+</div>
+<div class="flex gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+</div>
+</label>
+<!-- COD Option -->
+<label class="flex items-center gap-4 p-5 rounded-DEFAULT border border-tertiary-fixed bg-surface hover:bg-surface-container-low cursor-pointer transition-all duration-300">
+<input class="sr-only" name="payment_method" type="radio" value="cod"/>
+<div class="w-6 h-6 rounded-full border-2 border-tertiary-fixed flex items-center justify-center"></div>
+<div class="flex-1">
+<span class="font-body-lg text-body-lg text-on-surface block">Cash on Delivery</span>
+</div>
+<div class="flex gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</label>
+</div>
+<!-- Trust Strip -->
+<div class="mt-8 flex items-center justify-center gap-6 text-on-surface-variant opacity-80">
+<div class="flex items-center gap-2 font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-lg">lock</span>
+                            SECURE CHECKOUT
+                        </div>
+<div class="flex items-center gap-2 font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-lg">verified</span>
+                            ENCRYPTED PAYMENT
+                        </div>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary (Sticky) -->
+<div class="lg:col-span-5">
+<div class="sticky top-32 rounded-lg bg-white p-7 custom-shadow border border-[#fbe0ec]">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6"><span class="text-secondary">Order</span> Summary</h3>
+<!-- Items List -->
+<div class="flex flex-col gap-6 mb-8">
+<!-- Item 1 -->
+<div class="flex gap-4 items-center">
+<div class="w-20 h-24 rounded-DEFAULT bg-primary-fixed overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90" data-alt="A delicate bridal hair vine accessory made of gold wire and small freshwater pearls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsQ-7vIv7f0qt0yyBVrbmvYuClPnMQ0jr0zcBWnRfmpBqVWG5UrmFwHpUHR_jV0iiVrJC8DFzfnamMHcPsLaZ223vk55vzKtCz87PvqujMycfZDu21deKxoH5cmjbGYZ60-tlAUXSbmWJhCr9AX_f1PtIYlfQWoUSRO2829Hr_tMEDxiD2oBUuVo6USddcSgF_WHIfNAv0f4oNWNNseOndLh9vefwDW4vFjwT05LYplrDhQz88tTq6"/>
+<div class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-caps text-[10px]">1</div>
+</div>
+<div class="flex-1">
+<h4 class="font-body-lg text-body-lg text-on-surface">Pearl Blossom Vine</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Color: Gold / Pearl</p>
+</div>
+<div class="font-body-lg text-body-lg text-on-surface text-right">
+                                $145.00
+                            </div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4 items-center">
+<div class="w-20 h-24 rounded-DEFAULT bg-primary-fixed overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90" data-alt="A pair of elegant teardrop crystal earrings with rose gold settings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD870mmHtDDMFfoHZo-m0IGdq5iGjiPj700eznN7wr0KwFYHN89a5feHGD3jWGqBGcT59ccc7tLMkFL4abvc3oH9UcsUjvXxK4UWar1_F6guFOKRrtKLVjZ9102o8zJLKZIVdSUn2OSOakA6fKoi5stRtQlh74y8ufNhYXL4hX9jULoZeg2xh0ncOKjUeFMY8UUHDedtkPXcKTlSiJ78xnpEvxnYPQAY_qYHF65yY8MK4WcKSHLcvgt"/>
+<div class="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-caps text-[10px]">2</div>
+</div>
+<div class="flex-1">
+<h4 class="font-body-lg text-body-lg text-on-surface">Tear Drop Earrings</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Color: Rose Gold</p>
+</div>
+<div class="font-body-lg text-body-lg text-on-surface text-right">
+                                $170.00
+                            </div>
+</div>
+</div>
+<hr class="border-t border-outline-variant/30 mb-6"/>
+<!-- Calculations -->
+<div class="flex flex-col gap-3 font-body-md text-body-md text-on-surface-variant mb-6">
+<div class="flex justify-between">
+<span>Subtotal</span>
+<span class="text-on-surface">$315.00</span>
+</div>
+<div class="flex justify-between">
+<span>Shipping</span>
+<span class="text-on-surface">Calculated at next step</span>
+</div>
+<div class="flex justify-between">
+<span>Taxes</span>
+<span class="text-on-surface">$25.20</span>
+</div>
+</div>
+<hr class="border-t border-outline-variant/30 mb-6"/>
+<!-- Total -->
+<div class="flex justify-between items-end mb-8">
+<span class="font-body-lg text-body-lg text-on-surface">Total</span>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-on-surface-variant mr-2">USD</span>
+<span class="font-headline-md text-headline-md text-primary">$340.20</span>
+</div>
+</div>
+<!-- Place Order Button -->
+<a class="w-full rounded-full bg-primary py-4 font-label-caps text-label-caps text-on-primary text-center hover:bg-primary-container transition-colors duration-300 custom-shadow flex items-center justify-center gap-2" href="thank-you.html">
+                        PLACE ORDER
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<p class="font-body-md text-[12px] text-center mt-4 text-on-surface-variant opacity-70">
+                        By placing your order, you agree to our Terms of Service and Privacy Policy.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Shared Footer -->
+<div data-include="footer"></div>
+</body>
+</html>
